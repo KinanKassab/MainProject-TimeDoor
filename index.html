@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css"/> <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/sharp-solid.css"/> <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/sharp-regular.css"/> <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/sharp-light.css"/> <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/duotone.css"/>
+    <title>Digital Citizen AI - KinanKassab</title>
+</head>
+<body>
+    <header class="nav"> 
+        <div class="logo">
+            <img src="assets/logo.png" alt="logo of Digital Citizen AI" id="navImg">
+            <h1>DigitalCitizenAI</h1>
+        </div>
+        <div class="pages">
+            <a href="#home">Home</a>
+            <a href="#What">What is a Digital Citizen?</a>
+            <a href="#Ai">AI in Daily Life</a>
+            <a href="#Quiz">Quiz</a>
+            <a href="#Tips" onclick="toggle('tips')">Tips</a>
+            <a href="#About">About Us</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <div class="heroText">
+                    <h1>Digital Citizen AI</h1>
+                    <h2>Be a Responsible Digital Citizen in the Age of AI, Learn how to navigate the digital world safely, smartly, and ethically.</h2>     
+                    <a href="#What" class="heroBtn">Get Started</a>
+                </div>
+                <div class="heroImage">
+                    <img src="assets/logo.png" alt="hero Image" id="heroImg">
+                </div>  
+            </div>
+        </section>
+
+        <!-- What is a Digital Citizen? -->
+        <section class="what" id="What">
+            <div class="whatText">
+                <h1>What is a Digital Citizen?</h1>
+                <h4 class="target">A digital citizen is someone who uses technology responsibly, communicates respectfully, protects their privacy, and thinks critically online.</h4>
+            </div>
+            <div class="whatCards">
+                <div class="whatCard" onmouseenter="changeText(0)" onmouseleave="changeText(5)">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Security</h3>
+                </div>
+                <div class="whatCard" onmouseenter="changeText(1)" onmouseleave="changeText(5)">
+                    <i class="fa-solid fa-hands-helping"></i>
+                    <h3>Respect</h3>
+                </div>
+                <div class="whatCard" onmouseenter="changeText(2)" onmouseleave="changeText(5)">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3><span>Critical</span> <br> <span>Thinking</span></h3>
+                </div>
+                <div class="whatCard" onmouseenter="changeText(3)" onmouseleave="changeText(5)">
+                    <i class="fa-solid fa-user-secret"></i>
+                    <h3>Privacy</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI in Daily Life -->
+        <section id="Ai">
+            <div class="aiContent">
+                <div class="aiText">
+                    <h1>AI in Daily Life</h1>
+                    <p>Artificial Intelligence (AI) is not science fiction anymore — it’s part of your everyday life. From your phone to your favorite apps, AI helps you make choices, stay entertained, and even stay safe.</p>
+                </div>
+                
+                <div class="aiCards">
+                    <!-- Will add from JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="Quiz">
+            <h1>Test Your Knowledge! <br> Are You a Responsible Digital Citizen?</h1>
+            <button class="startQuiz" onclick="toggle('open')" id="startQuizBtn">Take The Quiz</button>
+            <div class="model close" id="quizModel">
+                <div class="modelContact">
+                    <div class="questionSection" id="questionSection">
+                        <h1 class="quizText"></h1><hr><br>
+
+                        <div class="chooseSection">
+                            <div id="firstChoose" class="choose">
+                                <input type="checkbox" name="first" id="first" class="checkbox">
+                                <label for="first" class="answer1" id="label1"></label>
+                            </div>
+
+                            <div id="secondChoose" class="choose">
+                                <input type="checkbox" name="second" id="second" class="checkbox">
+                                <label for="second" class="answer2" id="label2"></label>
+                            </div>
+
+                            <div id="thirdChoose" class="choose">
+                                <input type="checkbox" name="third" id="third" class="checkbox">
+                                <label for="third" class="answer3" id="label3"></label>
+                            </div>
+
+                            <div id="forthChoose" class="choose">
+                                <input type="checkbox" name="forth" id="forth" class="checkbox">
+                                <label for="forth" class="answer4" id="label4"></label>
+                            </div>
+                        </div>
+
+                        <button class="nextQuiz" id="nextQuiz" onclick="checkAnswers()">Next</button>
+                    </div>
+
+                    <div class="resultSection" id="resultSection">
+                        <h1 id="finalScoreText"></h1>
+                        <p id="finalMessage"></p>
+                        <button onclick="closeTips()" class="startQuiz">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="About">
+            <div class="aboutContainer">
+                <div class="sectionBadge"><i class="fa-solid fa-user"></i> About Kinan Kassab: </div> <hr>
+                <h1>Code, Curiosity, and a Decade of Tinkering</h1>
+                <p class="aboutIntro">
+                    I wrote my first lines of code at age ten and never really stopped. The journey began with C++ and C# console projects, 
+                    evolved into UI experiments, and about eighteen months ago accelerated into full-on web development. I still chase that feeling 
+                    of solving a puzzle at 2 a.m.—only now the puzzles look a lot better on screen.
+                </p>
+
+                <div class="aboutGrid">
+                    <div class="storyCard">
+                        <h3>Early Sparks</h3>
+                        <p>
+                            Childhood me thought `cout` or `cin` were magic. I spent weekends wiring up tiny C++ and C# apps, 
+                            learning that loops, logic, and stubbornness could build anything.
+                        </p>
+                    </div>
+                    <div class="storyCard">
+                        <h3>Leveling Up</h3>
+                        <p>
+                            That foundation made the jump to web development feel natural. When I dove in a year and a half ago, 
+                            the pace felt intense—in a good way. HTML, CSS, and JavaScript quickly became new favorite toys.
+                        </p>
+                    </div>
+                    <div class="storyCard">
+                        <h3>Why I Stay</h3>
+                        <p>
+                            I genuinely enjoy translating ideas into experiences. Clean UI, ethical tech, friendly microinteractions, those details matter. 
+                            And yes, I still celebrate every bug fix with suspiciously fancy coffee.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

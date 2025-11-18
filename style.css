@@ -1,0 +1,432 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.4s ease, background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+body{
+    background-color: #e3f2fd;
+}
+
+/* Nav */
+.nav {
+    border-bottom: #b4e5ff solid 4px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Nav Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#navImg {
+    height: 50px;
+    width: auto;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color:#2b96cc;
+}
+
+/* Pages Nav Section */
+.pages a {
+    text-decoration: none;
+    text-align: center;
+    margin: 0 0.5rem 0 0.5rem;
+    color: #2b96cc;
+    font-weight: bold;
+}
+
+.pages a:hover {
+    color: #10395c;
+}
+
+/* Home | Between */
+#home {
+    display: flex;
+    justify-content: center;
+}
+
+/* hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1rem;
+    max-width: 95%;
+    gap: 2rem;
+}
+
+/* hero Image */
+#heroImg {
+    height: 300px;
+    width: auto;
+    border-radius: 1rem;
+    border: #125679 solid 5px;
+    margin-right: 2rem;
+}
+
+.heroText {
+    height: 300px;
+    width: auto;
+    margin: 4rem 0 0 2rem;
+}   
+
+/* hero Text */
+.hero h1 {
+    color: #0d88c5;
+    font-size: 2.2rem;
+}
+.hero h2 {
+    color: rgb(30, 143, 255);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* hero Start BTN */
+.heroBtn {
+    background-color: #45a5d4;
+    color: #204f76;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.heroBtn:hover {
+    background-color: #257ec7;
+    color: #07a1ee;
+}
+
+/* Digital Citizen Section*/
+.what {
+    background-color: #125679;
+    border-radius: 1rem;
+    padding: 5rem;
+}
+
+.whatText {
+    color: #b4e5ff;    
+    text-align: center;
+}
+
+.target {
+    display: inline-block;
+    margin-top: 0;
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.target.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.whatCards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 2rem auto 0 auto;
+    gap: 1rem;
+}
+
+.whatCard {
+    width: 9rem;
+    height: 9.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #e3f2fd;
+    border-radius: 1.2rem;
+}
+
+.whatCard i {
+    font-size: 2rem;
+    margin-top: 0.4rem;
+}
+
+.whatCard:hover {
+    background-color: #b4e5ff;
+    transform: scale(1.05);
+}
+
+/* AI in Daily Life */
+.aiContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    margin-top: 3rem; 
+}
+
+.aiText {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto 1.3rem auto;
+}
+
+.aiText h1 {
+    margin: 0;
+}
+
+.aiText p {
+    font-size: 1.2rem;
+}
+
+.aiCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 1.06rem;
+}
+
+.aiCard h3 {
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.aiCard p {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+
+.aiCard ul {
+    margin-top: 0.6rem;
+}
+
+.aiCardText {
+    border: 3px solid #10395c;
+    padding: 0.6rem;
+}
+
+/* Quiz Section */
+#Quiz {
+    margin-top: 2rem;
+    background-color: #125679;
+    border-radius: 1rem;
+    padding: 5rem;
+}
+
+.model.close {
+    display: none;
+}
+
+.model.open {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modelContact {
+    background: #e3f2fd;
+    padding: 25px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.questionSection {
+    display: block;
+}
+
+.chooseSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.choose {
+    background-color: #93bde0;
+    border-radius: 0.7rem;
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.choose:hover {
+   transform: scale(1.04);
+}
+
+.quizText {
+    font-size: 1.6rem;
+}
+
+.nextQuiz {
+    background-color: #c6e0f3;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: large;
+}
+
+.nextQuiz:hover {
+   transform: scale(1.04);
+   background-color: #a6d2f1; 
+}
+
+
+#Quiz h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0ac6e7;
+    letter-spacing: 0.5px;
+}
+
+.startQuiz {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 28px;
+    background: #2196f3;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.startQuiz:hover {
+    background: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(25, 118, 210, 0.25);
+}
+
+@keyframes popUp-open {
+    from { 
+        opacity: 0; 
+        transform: scale(0.82); 
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+@keyframes popUp-close {
+    from { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+    to { 
+        opacity: 0; 
+        transform: scale(0.82); 
+    }
+}
+/* Result Section */
+.resultSection {
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.resultSection h1 {
+    font-size: 2rem;
+    color: #0d88c5;
+    margin-bottom: 0.5rem;
+}
+
+.resultSection p {
+    font-size: 1.1rem;
+    color: #10395c;
+    margin-bottom: 1.5rem;
+}
+
+/* About Section */
+.about {
+    margin-top: 2rem;
+    background: #f5fbff;
+    border-radius: 1.5rem;
+    padding: 5rem 3rem;
+    box-shadow: 0 15px 45px rgba(16, 57, 92, 0.08);
+}
+
+.aboutContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sectionBadge {
+    display: inline-block;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 1.5rem 0 0;
+    color: #0d88c5;
+    border-radius: 0.55rem;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.about h1 {
+    margin: 2rem 0 0 0;
+    font-size: 2.3rem;
+    color: #0a3255;
+}
+
+.aboutIntro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #355471;
+    margin: 1rem 0 2rem 0;
+}
+
+.aboutGrid {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.storyCard {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #d4e6f6;
+}
+
+.storyCard h3 {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    color: #0d88c5;
+}
+
+.storyCard p {
+    margin: 0;
+    color: #355471;
+    line-height: 1.6;
+}
+
+.storyCard:hover{
+    transform:  translateY(-10px);
+}
