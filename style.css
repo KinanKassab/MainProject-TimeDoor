@@ -9,6 +9,19 @@ html {
 
 body{
     background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Main container */
+main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section {
+    box-sizing: border-box;
 }
 
 /* Nav */
@@ -38,12 +51,19 @@ body{
 }
 
 /* Pages Nav Section */
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
 .pages a {
     text-decoration: none;
     text-align: center;
     margin: 0 0.5rem 0 0.5rem;
     color: #2b96cc;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .pages a:hover {
@@ -54,6 +74,8 @@ body{
 #home {
     display: flex;
     justify-content: center;
+    padding: 1rem 0.5rem;
+    box-sizing: border-box;
 }
 
 /* hero Section */
@@ -117,6 +139,8 @@ body{
     background-color: #125679;
     border-radius: 1rem;
     padding: 5rem;
+    margin: 2rem 1rem;
+    box-sizing: border-box;
 }
 
 .whatText {
@@ -168,6 +192,11 @@ body{
 }
 
 /* AI in Daily Life */
+#Ai {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
 .aiContent {
     display: flex;
     justify-content: center;
@@ -429,4 +458,354 @@ body{
 
 .storyCard:hover{
     transform:  translateY(-10px);
+}
+
+/* Responsive Design */
+
+/* Large screens */
+@media (min-width: 1440px) {
+    .hero {
+        max-width: 1400px;
+        margin: 1rem auto;
+    }
+
+    .whatCards {
+        max-width: 1200px;
+    }
+
+    .aiContent {
+        max-width: 1400px;
+        margin: 3rem auto;
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .heroText {
+        margin: 2rem 0 0 0;
+        height: auto;
+    }
+
+    #heroImg {
+        margin-right: 0;
+        height: 250px;
+    }
+
+    .whatCards {
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .whatCard {
+        width: 8rem;
+        height: 8.5rem;
+    }
+
+    .aboutGrid {
+        flex-direction: column;
+    }
+
+    .aiText {
+        max-width: 90%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    #navImg {
+        height: 40px;
+        margin-right: 0.5rem;
+    }
+
+    .pages {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .pages a {
+        margin: 0;
+        padding: 0.5rem;
+        text-align: left;
+    }
+
+    /* Hero Section */
+    .hero {
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+
+    .heroText {
+        margin: 1rem 0 0 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    #heroImg {
+        height: 200px;
+        width: auto;
+    }
+
+    .heroBtn {
+        font-size: 1.1rem;
+        padding: 0.6rem;
+    }
+
+    /* What Section */
+    .what {
+        padding: 2rem 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .whatText h1 {
+        font-size: 1.5rem;
+    }
+
+    .whatText h4 {
+        font-size: 0.95rem;
+    }
+
+    .whatCards {
+        margin-top: 1.5rem;
+        gap: 0.8rem;
+        justify-content: center;
+    }
+
+    .whatCard {
+        width: 45%;
+        max-width: 8rem;
+        height: auto;
+        min-height: 7rem;
+        padding: 0.5rem;
+    }
+
+    .whatCard i {
+        font-size: 1.5rem;
+    }
+
+    .whatCard h3 {
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+    }
+
+    /* AI Section */
+    .aiContent {
+        margin-top: 1.5rem;
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .aiText {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .aiText h1 {
+        font-size: 1.5rem;
+    }
+
+    .aiText p {
+        font-size: 1rem;
+    }
+
+    .aiCards {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .aiCard {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .aiCard h3 {
+        font-size: 1.1rem;
+        margin-right: 0;
+    }
+
+    .aiCardText {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+
+    /* Quiz Section */
+    #Quiz {
+        padding: 2rem 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    #Quiz h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .startQuiz {
+        font-size: 1rem;
+        padding: 10px 24px;
+    }
+
+    .modelContact {
+        width: 95%;
+        max-width: 100%;
+        padding: 20px 15px;
+        margin: 1rem;
+    }
+
+    .quizText {
+        font-size: 1.2rem;
+    }
+
+    .chooseSection {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .choose {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .nextQuiz {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .resultSection h1 {
+        font-size: 1.5rem;
+    }
+
+    .resultSection p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about {
+        padding: 2rem 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .sectionBadge {
+        font-size: 1.3rem;
+        padding: 1rem 0 0 0;
+    }
+
+    .about h1 {
+        font-size: 1.6rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .aboutIntro {
+        font-size: 1rem;
+        margin: 0.8rem 0 1.5rem 0;
+    }
+
+    .aboutGrid {
+        gap: 1rem;
+    }
+
+    .storyCard {
+        padding: 1.2rem;
+    }
+
+    .storyCard h3 {
+        font-size: 1.1rem;
+    }
+
+    .storyCard p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    #navImg {
+        height: 35px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 0.9rem;
+    }
+
+    #heroImg {
+        height: 150px;
+    }
+
+    .what {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .whatText h1 {
+        font-size: 1.3rem;
+    }
+
+    .whatCards {
+        gap: 0.5rem;
+    }
+
+    .whatCard {
+        width: 48%;
+        min-width: 7rem;
+        min-height: 6.5rem;
+    }
+
+    .whatCard h3 {
+        font-size: 0.85rem;
+    }
+
+    .aiText h1 {
+        font-size: 1.3rem;
+    }
+
+    #Quiz h1 {
+        font-size: 1.3rem;
+    }
+
+    .about h1 {
+        font-size: 1.4rem;
+    }
+
+    .sectionBadge {
+        font-size: 1.1rem;
+    }
+
+    .modelContact {
+        width: 98%;
+        padding: 15px 10px;
+    }
+
+    .quizText {
+        font-size: 1.1rem;
+    }
 }
