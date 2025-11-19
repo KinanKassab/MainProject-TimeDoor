@@ -240,3 +240,6 @@ function closeTips() {
     resetQuiz()
 }
 
+function playVideo() {
+    window.open("https://youtu.be/X3D0EncME5s", "_blank")
+}
