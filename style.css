@@ -5,6 +5,7 @@ html {
 * {
     font-family: 'Poppins', sans-serif;
     transition: color 0.4s ease, background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    
 }
 
 body{
@@ -29,7 +30,8 @@ section {
     border-bottom: #b4e5ff solid 4px;    
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+    margin: 0 1rem;
 }
 
 /* Logo Nav Section */
