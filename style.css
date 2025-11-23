@@ -500,6 +500,13 @@ section {
         max-width: 1400px;
         margin: 3rem auto;
     }
+
+    .playBtn {
+        max-width: 85%; 
+        display: flex;
+        margin: 1rem auto;
+        justify-content: center;
+    }
 }
 
 /* Tablet screens */
@@ -537,6 +544,13 @@ section {
 
     .aiText {
         max-width: 90%;
+    }
+
+    .playBtn {
+        max-width: 85%; 
+        display: flex;
+        margin: 1rem auto;
+        justify-content: center;
     }
 }
 
@@ -761,6 +775,13 @@ section {
     .storyCard p {
         font-size: 0.95rem;
     }
+
+    .playBtn {
+        max-width: 85%; 
+        display: flex;
+        margin: 1rem auto;
+        justify-content: center;
+    }
 }
 
 /* Small screens */
@@ -830,5 +851,12 @@ section {
 
     .quizText {
         font-size: 1.1rem;
+    }
+    
+    .playBtn {
+        max-width: 85%; 
+        display: flex;
+        margin: 1rem auto;
+        justify-content: center;
     }
 }
