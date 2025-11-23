@@ -21,7 +21,7 @@ function changeText(Which) {
         }
 
         targetText.classList.remove('fade-out')
-    }, 300)
+    }, 280)
 }
 
 // Ai in daily life
@@ -118,13 +118,13 @@ const checkboxLabels = [
 
 const checks = [document.getElementById("first"), document.getElementById("second"), document.getElementById("third"), document.getElementById("forth")]
 
-const message = {
-    4: "Perfect! You're a top-tier digital citizen. Your online instincts are elite.",
-    3: "Great job! You understand digital safety well, just refine a bit more.",
-    2: "Not bad, but you need some improvement to stay safe and responsible online.",
-    1: "You know a little, but you should learn more to protect yourself online.",
-    0: "Looks like you're new to digital safety. No worries — every expert starts somewhere!"
-}
+const message = [
+    "Looks like you're new to digital safety. No worries — every expert starts somewhere!",
+    "You know a little, but you should learn more to protect yourself online.",
+    "Not bad, but you need some improvement to stay safe and responsible online.",
+    "Great job! You understand digital safety well, just refine a bit more.",
+    "Perfect! You're a top-tier digital citizen. Your online instincts are elite."
+]
 
 var QuizIndex = 0
 var Score = 0

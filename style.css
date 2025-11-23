@@ -5,7 +5,6 @@ html {
 * {
     font-family: 'Poppins', sans-serif;
     transition: color 0.4s ease, background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
-    
 }
 
 body{
@@ -154,7 +153,7 @@ section {
     display: inline-block;
     margin-top: 0;
     opacity: 1;
-    transition: opacity, transform;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .target.fade-out {
